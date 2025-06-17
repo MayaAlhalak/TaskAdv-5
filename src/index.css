@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0 ;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+:root{
+    --gray:#6C6C6C;
+    --orang: #FEAF00;
+    --pink :#F2EAE1;
+    --twogray:#C4C4C4;
+    --blue:#F8F8FF;
+    --graythree:#E5E5E5;
+    --red:#FE0000;
+   --black:#00000080;
+
+}
+.color-gray{
+    color: var(--gray);
+}
+.backColor{
+    background-color: var(--orang);
+}
+.backtrnsperant{
+backdrop-filter: blur(30px);
+background-color: var(--black);
+z-index: 3;
+height: 100vh;
+width: 100vw;
+
+}
+.backred{
+    background-color: var(--red);
+}
+.backColorBlue{
+    background-color: var(--blue) !important;
+}
+.backColor2{
+    background-color: var(--pink);
+}
+.colorLink{
+    color: var(--orang);
+}
+.w-200{
+    width: 200px !important;
+}
+.w-270{
+    width: 270px;
+}
+/* font size */
+.fs-14{
+    font-size: 14px;
+}
+.fs-22{
+    font-size: 22px;
+}
+.fs-60{
+    font-size: 60px;
+}
+.fs-30{
+    font-size: 30px;
+}
+
+/* margim */
+.mb-10{
+    margin-bottom: 10px;
+}
+.mb-14{
+    margin-bottom: 14px;
+}
+.me-19{
+    margin-right: 19px;
+}
+.mb-20{
+    margin-bottom: 20px;
+}
+.mb-27{
+    margin-bottom: 27px;
+}
+.mb-32{
+    margin-bottom: 32px;
+}
+.mb-40{
+    margin-bottom: 40px;
+}
+.mb-42{
+    margin-bottom: 42.8px;
+}
+.mb-43{
+    margin-bottom: 43px;
+}
+.mb-50{
+    margin-bottom: 50px;
+}
+.mb-54{
+    margin-bottom: 54px;
+}
+.mb-64{
+    margin-bottom: 64px;
+}
+.mt-76{
+margin-top: 76px;
+}
+.mb-80{
+    margin-bottom: 80px;
+}
+.mb-91{
+    margin-bottom: 91px;
+}
+.mt-120{
+    margin-top: 120px;
+}
+
+
+
+/* padding */
+.custom-padding {
+    padding: 42px 30px;
+}
+.custom1-padding {
+    padding: 42px 30px 20px 20px;
+}
+.btn-padding{
+    padding: 14px 180px;
+}
+.sidpadding{
+    padding: 35px 39px 31px 39px;
+}
+.btnSinUp{
+    padding: 14px 174px !important ;
+}
+
+.paddingright{
+    padding: 24px 109px 116px 109px !important;
+}
+.padedit{
+    padding-left: 26px;
+    padding-right: 26px;
+}
+.paddelet{
+    padding-left: 18px;
+    padding-right: 18px;
+}
+.padpop{
+    padding: 80px 160px;
+}
+.padyes{
+    padding: 11px 76px;
+}
+.gap-176px{
+    column-gap: 176px;
+}
+.g-330{
+    gap: 300px;
+}
+/* width */
+.w-664{
+    width: 664px !important;
+}
+.reduis-4{
+    border-radius: 4px;
+}
+.border-radius{
+    border-radius: 20px;
+}
+@media (max-width: 992px) {
+    .btnSinUp {
+        padding: 20px !important;
+         
+    }
+    .btn-padding{
+        padding: 10px;
+    }
+}
