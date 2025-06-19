@@ -15,10 +15,10 @@ function Dashboard() {
   const [items, setItems] = useState<Product[]>([]);
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const itemsPerPage = 8;
   const [show , setshow] = useState<number | null >(null)
   const [numberId , setnumberId] = useState<number | null >(null)
   const [showpop , setshowpop] = useState<boolean>(false)
+const [itemsPerPage, setItemsPerPage] = useState<number>(8);
 
   useEffect(() =>{
     if(!localStorage.getItem("token"))
@@ -26,6 +26,27 @@ function Dashboard() {
       navigate("/")
     } 
    },[])
+   useEffect(() => {
+  const calculateItemsPerPage = () => {
+    const windowHeight = window.innerHeight;
+
+    const cardHeight = 250; 
+    const headerSpace = 300; 
+
+    const availableHeight = windowHeight - headerSpace;
+
+    const cardsPerColumn = Math.floor(availableHeight / cardHeight);
+    const columns = 4;
+
+    const total = Math.max(1, cardsPerColumn * columns);
+    setItemsPerPage(total);
+  };
+
+  calculateItemsPerPage();
+  window.addEventListener("resize", calculateItemsPerPage);
+
+  return () => window.removeEventListener("resize", calculateItemsPerPage);
+}, []);
 
   // delet
   const popdelet = (id : number) =>{

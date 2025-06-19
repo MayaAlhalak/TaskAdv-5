@@ -78,3 +78,25 @@
 
 
 
+.dashboard-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.header-section {
+  flex-shrink: 0;
+}
+
+.card-list-section {
+  flex-grow: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-grid {
+  flex-grow: 1;
+  overflow-y: auto;
+}

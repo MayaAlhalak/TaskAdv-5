@@ -42,13 +42,17 @@ function SideBar() {
   }
 
   return (
-    <section className="w-270 sidpadding d-flex flex-column  backColor2">
-      <div className='logo d-flex justify-content-center align-items-center  position-relative;'><img src="/TaskAdv-5/assets/image/Group.png" alt="" className="mb-54"/></div>
-      <div className="d-flex flex-column justify-content-center align-items-center mb-91">
-        <img src={profileImage || "/assets/image/pexels-photo-2379004 1.png"} alt="Profile" className="rounded-circle profile"/>
-        <h1 className="font-weight-bold lh-1 fs-6 text-dark mt-4 mb-0">{user_name}</h1>
+    <section className="w-270 sidpadding d-flex flex-column justify-content-between backColor2" style={{ height: "100vh" }}>
+      <div>
+        <div className='logo d-flex justify-content-center align-items-center  position-relative'>
+          <img src="/TaskAdv-5/assets/image/Group.png" alt="" className="mb-54"/>
+        </div>
+        <div className="d-flex flex-column justify-content-center align-items-center mb-91">
+          <img src={profileImage || "/assets/image/pexels-photo-2379004 1.png"} alt="Profile" className="rounded-circle profile"/>
+          <h1 className="font-weight-bold lh-1 fs-6 text-dark mt-4 mb-0">{user_name}</h1>
+        </div>
       </div>
-      <div className='d-flex flex-column justify-content-between g-330 align-items-center'>
+  
         <ul className="list-unstyled addHover mb-0 ">
           {
             menuItem.map((item , index) => (
@@ -57,13 +61,12 @@ function SideBar() {
           }
           
         </ul>
-        <div>
+        
           <div className='d-flex justify-content-center align-items-center gap-4' onClick={LogOut} >
             <p className='mb-0'>Logout</p>
             <img src="/TaskAdv-5/assets/image/sign-out-alt 1.png" alt="" />
           </div>
-        </div>
-      </div>
+
     </section>
   )
 }
