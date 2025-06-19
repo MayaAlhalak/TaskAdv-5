@@ -58,8 +58,8 @@ function EdaitItem() {
     }
    
   return (
-    <>
-       <button className='border border-0'><img src="/assets/image/Control.png" alt=""  onClick={goToDashboard} /></button>
+    <section className="padadd">
+      <button className='border border-0'><img src="/TaskAdv-5/assets/image/Control.png" alt="" onClick={goToDashboard} /></button>
       <h2 className='fw-semibold fs-60 title '>edit ITEM</h2>
       <Form className='FormAdd d-flex  align-items-center  flex-lg-nowrap flex-wrap'>
       <div>
@@ -89,7 +89,7 @@ function EdaitItem() {
     <div className='d-flex justify-content-center align-items-center mt-120' >
       <button className='btnSave border border-0  lh-1 fs-2 fw-medium backColor text-light reduis-4' onClick={handladeupdate} >Save</button>
     </div>
-    </>
+    </section>
   )
 }
 

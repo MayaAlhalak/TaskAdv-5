@@ -2,13 +2,16 @@ import { useNavigate } from 'react-router-dom'
 import './AddIems.css'
 import { Form } from 'react-bootstrap'
 import axios from 'axios'
-import { useRef, type FormEvent } from 'react'
+import { useRef, useState, type FormEvent } from 'react'
 
 function AddIems() {
     const navigate = useNavigate()
     const name = useRef<HTMLInputElement>(null)
     const price = useRef<HTMLInputElement>(null)
     const image = useRef<HTMLInputElement>(null)
+    
+    const [previewImage, setPreviewImage] = useState<string | null>(null)
+
     const goToDashboard = () =>{
         navigate("/dashboard")
     }
@@ -34,8 +37,8 @@ function AddIems() {
     .catch(error => console.log(error))
     }
   return (
-    <>
-      <button className='border border-0'><img src="/assets/image/Control.png" alt="" onClick={goToDashboard} /></button>
+    <section className='padadd'>
+      <button className='border border-0'><img src="/TaskAdv-5/assets/image/Control.png" alt="" onClick={goToDashboard} /></button>
       <h2 className='fw-semibold fs-60 title '>ADD NEW ITEM</h2>
       <Form className='FormAdd  d-flex  align-items-center flex-lg-nowrap flex-wrap  '>
       <div>
@@ -51,14 +54,33 @@ function AddIems() {
       <div>
          <Form.Group >
             <Form.Label className='fs-2 lh-1 fw-medium color-gray mb-14 '>Image</Form.Label>
-            <Form.Control type="file" className=' file-input file-input1 backColorBlue p-0' ref={image}/>
+            <Form.Control 
+                type="file" 
+                className={`file-input backColorBlue p-0 ${previewImage ? '' : 'file-input1'}`} 
+                ref={image}
+               onChange={(e) => {
+                  const target = e.target as HTMLInputElement; 
+                  const file = target.files?.[0];
+                  if (file) {
+                    setPreviewImage(URL.createObjectURL(file));
+                  }
+                }}
+                style={previewImage ? {
+                  backgroundImage: `url(${previewImage})`,
+                  backgroundSize: '280px 208px',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat',
+                  width: '547px',
+                  height: '209px'
+                } : {}}
+/>
         </Form.Group>
       </div>
     </Form>
     <div className='d-flex justify-content-center align-items-cente lg:mt-120 mt-76'>
       <button className='btnSave border border-0  lh-1 fs-2 fw-medium backColor text-light reduis-4' onClick={AddItems}>Save</button>
     </div>
-    </>
+    </section>
   )
 }
 

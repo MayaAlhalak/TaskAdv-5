@@ -15,7 +15,7 @@
 }
 
 .file-input{
-    border: 2px dashed var(--graythree) !important;
+    border: 1px dashed rgba(56, 78, 183, 0.3);
     background-repeat: no-repeat;
     background-position: center;
      color: transparent !important;
@@ -24,12 +24,13 @@
 .file-input1{
     width: 547px;
     height: 209px;
-     background-image: url("../../../public/assets/image/Upload\ icon\ \(1\).png");
+    background-image: url("/TaskAdv-5/assets/image/Upload icon (1).png");
 }
 .file-input2{
     width: 100px;
     height: 100px;
-     background-image: url("../../../public/assets/image/Upload icon (2).png");
+     background-image: url("/TaskAdv-5/assets/image/Upload icon (2).png");
+
    
 }
 .btnSave{

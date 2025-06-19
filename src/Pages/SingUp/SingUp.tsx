@@ -52,7 +52,7 @@ function SingUp() {
            <div className='allinfo   bg-light border-radius custom1-padding'>
               <Title
                 show = {false}
-                  img="/assets/image/Group.png"
+                  img="/TaskAdv-5//assets/image/Group.png"
                   title="Sign up"
                   text="Fill in the following fields to create an account."/>
                    <Form>   

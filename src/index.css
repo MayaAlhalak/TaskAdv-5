@@ -13,7 +13,7 @@
     --graythree:#E5E5E5;
     --red:#FE0000;
    --black:#00000080;
-
+    --textgray:#8080808C
 }
 .color-gray{
     color: var(--gray);
@@ -21,14 +21,17 @@
 .backColor{
     background-color: var(--orang);
 }
-.backtrnsperant{
+.backtrnsperant {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
 backdrop-filter: blur(30px);
 background-color: var(--black);
-z-index: 3;
-height: 100vh;
-width: 100vw;
-
+  z-index: 9999;
 }
+
+
 .backred{
     background-color: var(--red);
 }
@@ -51,6 +54,9 @@ width: 100vw;
 .fs-14{
     font-size: 14px;
 }
+.fs-13{
+    font-size: 13px;
+}
 .fs-22{
     font-size: 22px;
 }
@@ -59,6 +65,9 @@ width: 100vw;
 }
 .fs-30{
     font-size: 30px;
+}
+.fs-40{
+    font-size: 40px;
 }
 
 /* margim */
@@ -118,7 +127,7 @@ margin-top: 76px;
     padding: 42px 30px;
 }
 .custom1-padding {
-    padding: 42px 30px 20px 20px;
+    padding: 20px 30px 20px 20px;
 }
 .btn-padding{
     padding: 14px 180px;
@@ -132,6 +141,15 @@ margin-top: 76px;
 
 .paddingright{
     padding: 24px 109px 116px 109px !important;
+}
+.padShow{
+    padding: 24px 64px 48px 64px;
+}
+.padadd{
+    padding: 24px 64px 168px 109px;
+}
+.padShow{
+    padding: 24px 64px 48px 64px;
 }
 .padedit{
     padding-left: 26px;
@@ -147,6 +165,7 @@ margin-top: 76px;
 .padyes{
     padding: 11px 76px;
 }
+/* gab */
 .gap-176px{
     column-gap: 176px;
 }
@@ -171,4 +190,13 @@ margin-top: 76px;
     .btn-padding{
         padding: 10px;
     }
+    .paddingright{
+         padding: 24px 50px 116px 50px !important;
+    }
+    .w-664 {
+    width: 500px !important;
+}
+.fs-60{
+    font-size: 40px;
+}
 }

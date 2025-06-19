@@ -9,6 +9,8 @@ function SignIn() {
   const email = useRef<HTMLInputElement>(null)
   const password = useRef<HTMLInputElement>(null)
   const Navigate = useNavigate()
+
+
   const SendDate=(Event:FormEvent) =>{
     Event.preventDefault();
      axios.post("https://web-production-3ca4c.up.railway.app/api/login" , 
@@ -38,7 +40,7 @@ function SignIn() {
            <div className='allinfo w-476 bg-light border-radius custom-padding'>
               <Title
                   show = {true}
-                  img="/assets/image/Group.png"
+                  img="/TaskAdv-5/assets/image/Group.png"
                   title="Sign In"
                   text="Enter your credentials to access your account"/>
                <Form>

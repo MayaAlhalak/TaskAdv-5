@@ -2,3 +2,6 @@
     width: 373px;
     height: 373px;
 }
+.text{
+    color: var(--textgray);
+}

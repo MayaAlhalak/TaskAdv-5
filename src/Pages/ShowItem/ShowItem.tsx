@@ -42,25 +42,25 @@ function ShowItem() {
         .catch(error => console.log(error))
     },[id])
   return (
-    <>
-       <button className='border border-0'><img src="/assets/image/Control.png" alt="" onClick={goToDashboard} /></button>
+    <section className='padShow'>
+       <button className='border border-0'><img src="/TaskAdv-5/assets/image/Control.png" alt="" onClick={goToDashboard} /></button>
        <h2 className="lh-1 fs-60 fw-semibold text-black mt-76 mb-40">{olditem?.name}</h2>
-       <div className="imgiphon mx-auto"><img src={olditem?.image_url}  alt="" /></div>
+       <div className="imgiphon mx-auto d-flex  align-items-center align-items-center mb-40 "><img src={olditem?.image_url} className='w-100 h-100' alt="" /></div>
       <div className='d-flex  align-items-center gap-176px   flex-wrap'>
-        <div className='d-flex justify-content-center gap-4 align-items-center ' >
-            <h3 className='lh-1 fs-60 fw-semibold'>price:</h3>
-            <p className='mb-0'>{olditem?.price}</p>
+        <div className='d-flex justify-content-center gap-4 align-items-center  mb-40' >
+            <h3 className='lh-1 fs-60 fw-semibold mb-0'>price:</h3>
+            <p className='text mb-0 lh-1 fs-40 fw-medium'>{olditem?.price}$</p>
         </div>
-        <div className='d-flex justify-content-center align-items-center gap-4'>
-            <h3 className='lh-1 fs-60 fw-semibold'>Added at:</h3>
-            <p className='mb-0'>{olditem?.updated_at}</p>
+        <div className='d-flex justify-content-center align-items-center gap-4  mb-40'>
+            <h3 className='lh-1 fs-60 fw-semibold mb-0'>Added at:</h3>
+            <p className=' text mb-0  lh-1 fs-40 fw-medium'>{olditem?.updated_at}</p>
         </div>
-        <div className='d-flex justify-content-center align-items-center gap-4'>
-            <h3 className='lh-1 fs-60 fw-semibold'>updated at:</h3>
-            <p className='mb-0'>{olditem?.created_at}</p>
+        <div className='d-flex justify-content-center align-items-center gap-4 mx-auto'>
+            <h3 className='lh-1 fs-60 fw-semibold mb-0'>updated at:</h3>
+            <p className='text mb-0  lh-1 fs-40 fw-medium'>{olditem?.created_at}</p>
         </div>
       </div>
-    </>
+    </section>
   )
 }
 

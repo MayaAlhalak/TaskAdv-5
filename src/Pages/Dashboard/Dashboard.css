@@ -1,10 +1,14 @@
-.search::placeholder{
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 100%;
-       color: var(--twogray);
+.form-control {
+        font-weight: 400 !important;
+        font-size: 14px !important;
+        line-height: 100%; 
+       color: var(--twogray) !important;
+         padding: 11px 16px;
+    border-color: #E5E5E5;
+    border-right: none;
 
 }
+
 .itemimage{
     width: 952px;
     height: 456px;
@@ -14,6 +18,7 @@
 .imgmobile{
     width: 208px;
     height: 208px;
+    box-shadow: 8px 8px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .hoveradd{
     width: 230px;
@@ -21,11 +26,7 @@
     background-color:#F2EAE1B2;
     border-radius: 16px;
 }
-.search .form-control{
-    padding: 11px 16px;
-    border-color: #E5E5E5;
-    border-right: none;
-}
+
 .input-group .btn{
     border-left: none;
     border-color: #E5E5E5;
@@ -33,40 +34,12 @@
 .additem{
     background-color: var(--orang);
     padding: 13px 24px;
-    border-radius: 4px;
 }
 
-.carousel-indicators [data-bs-target]{
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+.row{
+    gap: 40px;
 }
-.pagination{
-gap: 5px;
-}
-.page-link{
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.page-item:last-child .page-link , .page-item , .page-item:first-child  .page-link {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.page-item  span , .page-link {
-    color: black;
-}
-.active>.page-link, .page-link.active {
-     background-color: var(--orang) !important;
-     border: none;
-}
+
 .disabled{
     border-radius: 8px;
 }
@@ -74,13 +47,33 @@ gap: 5px;
  .gap-bottom-lg-40 {
   margin-bottom: 40px;
 }
-.hoverLayer {
-      top: -97px;
-    left: 55px;}
-@media (max-width: 991.98px) {
+
+    .pagination-wrapper {
+        gap: 5px;
+        margin-top: 80px;
+
+}
+.page-btn,
+.nav-btn {
+    width: 60px;
+    height: 60px;
+    border-color: rgba(241, 241, 241, 1) !important;
+}
+
+.page-btn.active {
+  background-color: var(--orang);
+  color: white;
+}
+
+
+
+@media (max-width: 992px) {
   .gap-bottom-lg-40 {
     margin-bottom: 1rem !important;
   }
+.row{
+    gap: 20px;
+}
 }
 
 
